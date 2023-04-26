@@ -21,9 +21,11 @@ return require('packer').startup(function(use)
  	use('vim-airline/vim-airline')
  	use('tpope/vim-commentary')
  	use('mg979/vim-visual-multi')
- 	use('preservim/nerdtree')
- 	use('ryanoasis/vim-devicons')
- 	use('Xuyuanp/nerdtree-git-plugin')
+ 	-- use('preservim/nerdtree')
+ 	-- use('ryanoasis/vim-devicons')
+ 	-- use('Xuyuanp/nerdtree-git-plugin')
+	-- use('use mfussenegger/nvim-dap')
+	-- use('luk400/vim-jukit')
 
 
 
