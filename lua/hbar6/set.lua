@@ -28,3 +28,9 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "0"
 
 vim.g.mapleader = " "
+
+
+
+vim.opt.laststatus=2
+vim.opt.showtabline=2
+

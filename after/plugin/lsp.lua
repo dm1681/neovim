@@ -1,4 +1,5 @@
 local lsp = require("lsp-zero")
+local coq = require("coq")
 
 lsp.preset("recommended")
 
@@ -48,6 +49,9 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+lsp.setup(coq.lsp_ensure_capabilities())
+
+
 
 vim.diagnostic.config({
     virtual_text = true

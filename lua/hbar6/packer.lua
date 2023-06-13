@@ -19,7 +19,6 @@ return require('packer').startup(function(use)
  	use('theprimeagen/harpoon')
  	use('mbbill/undotree')
  	use('tpope/vim-fugitive')
- 	use('vim-airline/vim-airline')
  	use('tpope/vim-commentary')
  	use('mg979/vim-visual-multi')
  	use('preservim/nerdtree')
@@ -31,6 +30,53 @@ return require('packer').startup(function(use)
 	use('j-hui/fidget.nvim')
 	use('ThePrimeagen/vim-be-good')
 	use('ms-jpq/coq_nvim')
+	use('rcarriga/nvim-notify')
+	use ('stevearc/dressing.nvim')
+	use {'nvim-telescope/telescope-ui-select.nvim' }
+	use 'tamton-aquib/staline.nvim'
+
+	use {
+	    'tanvirtin/vgit.nvim',
+	    requires = {
+		'nvim-lua/plenary.nvim'
+	    }
+	}
+
+
+	use {
+	    'chipsenkbeil/distant.nvim',
+	    branch = 'v0.2',
+	    config = function()
+		require('distant').setup {
+		    -- Applies Chip's personal settings to every machine you connect to
+		    --
+		    -- 1. Ensures that distant servers terminate with no connections
+		    -- 2. Provides navigation bindings for remote directories
+		    -- 3. Provides keybinding to jump into a remote file's parent directory
+		    ['*'] = require('distant.settings').chip_default()
+		}
+	    end
+	}
+
+
+
+	use {
+	    'sudormrfbin/cheatsheet.nvim',
+
+	    requires = {
+		{'nvim-telescope/telescope.nvim'},
+		{'nvim-lua/popup.nvim'},
+		{'nvim-lua/plenary.nvim'},
+	    }
+	}
+
+	use({
+	    'willothy/nvim-cokeline',
+	    requires = 'kyazdani42/nvim-web-devicons', -- If you want devicons
+	    config = function()
+		require('cokeline').setup()
+	    end
+	})
 
 
 
