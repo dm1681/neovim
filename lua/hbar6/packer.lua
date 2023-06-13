@@ -30,7 +30,7 @@ return require('packer').startup(function(use)
 	use('joeytwiddle/sexy_scroller.vim')
 	use('j-hui/fidget.nvim')
 	use('ThePrimeagen/vim-be-good')
-
+	use('ms-jpq/coq_nvim')
 
 
 
